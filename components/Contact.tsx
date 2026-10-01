@@ -14,7 +14,7 @@ const WHATSAPP = "https://wa.me/93728345023";
 
 // Replace this with your real Telegram username.
 // Example: https://t.me/hotak_real_estate
-const TELEGRAM = "https://t.me/YOUR_TELEGRAM_USERNAME";
+const TELEGRAM = "https://t.me/+93728345023";
 
 export default function Contact() {
   return (
