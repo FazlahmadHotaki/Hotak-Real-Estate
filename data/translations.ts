@@ -1,3 +1,5 @@
+// data/translations.ts
+
 export type Language = "fa" | "ps" | "en";
 
 export const translations = {
@@ -9,22 +11,23 @@ export const translations = {
       contact: "تماس با ما",
     },
 
-location: {
-  label: "موقعیت ما",
-  title: "موقعیت دفتر ما",
-  description:
-    "موقعیت ملکیت ما را از طریق تصاویر ماهواره‌ای مشاهده کرده و مناطق اطراف آن را بررسی کنید.",
-  coordinates: "مختصات ملکیت",
-  latitude: "۳۴°۱۹'۲۴.۱\" شمالی",
-  longitude: "۶۲°۱۰'۲۷.۹\" شرقی",
-  mapTitle: "نقشه ماهواره‌ای موقعیت ملکیت",
-  propertyLocation: "موقعیت ملکیت",
-  getDirections: "دریافت مسیر",
-  latitudeLabel: "عرض جغرافیایی",
-  longitudeLabel: "طول جغرافیایی",
-  mapType: "نوع نقشه",
-  satelliteImagery: "تصاویر ماهواره‌ای",
-},
+    location: {
+      label: "موقعیت ما",
+      title: "موقعیت دفتر ما",
+      description:
+        "موقعیت ملکیت ما را از طریق تصاویر ماهواره‌ای مشاهده کرده و مناطق اطراف آن را بررسی کنید.",
+      coordinates: "مختصات ملکیت",
+      latitude: "۳۴°۱۹'۲۴.۱\" شمالی",
+      longitude: "۶۲°۱۰'۲۷.۹\" شرقی",
+      mapTitle: "نقشه ماهواره‌ای موقعیت ملکیت",
+      propertyLocation: "موقعیت ملکیت",
+      getDirections: "دریافت مسیر",
+      latitudeLabel: "عرض جغرافیایی",
+      longitudeLabel: "طول جغرافیایی",
+      mapType: "نوع نقشه",
+      satelliteImagery: "تصاویر ماهواره‌ای",
+    },
+
     hero: {
       badge: "اعتماد در معاملات املاک",
       title1: "خانه‌ای که",
@@ -39,7 +42,8 @@ location: {
 
     search: {
       title: "ملک مورد نظر خود را پیدا کنید",
-      description: "نوع ملک و موقعیت مورد نظر خود را انتخاب کنید.",
+      description:
+        "نوع ملک و موقعیت مورد نظر خود را انتخاب کنید.",
       purpose: "نوع معامله",
       selectPurpose: "انتخاب نوع معامله",
       sale: "فروش",
@@ -121,28 +125,52 @@ location: {
     contact: {
       label: "تماس با ما",
       title: "با ما در تماس باشید",
+
+      notFoundTitle:
+        "ملک مورد نظر خود را پیدا نکردید؟",
+
+      notFoundDescription:
+        "با ما تماس بگیرید تا در پیدا کردن ملک مناسب کمک کنیم.",
+
       description:
         "برای خرید، فروش، رهن یا کرایه خانه و زمین با دفتر رهنمای معاملات ملا داد محمد هوتک تماس بگیرید.",
 
       phone: "تماس تلفنی",
-      whatsapp: "واتساپ",
-      whatsappText: "پیام در واتساپ",
-      telegram: "تلگرام",
-      telegramText: "پیام در تلگرام",
-      address: "آدرس دفتر",
-      addressValue: "هرات، افغانستان",
 
-      readyTitle: "آماده کمک به شما هستیم",
+      whatsapp: "واتساپ",
+
+      whatsappText:
+        "پیام در واتساپ",
+
+      telegram: "تلگرام",
+
+      telegramText:
+        "پیام در تلگرام",
+
+      address: "آدرس دفتر",
+
+      addressValue:
+        "هرات، افغانستان",
+
+      readyTitle:
+        "آماده کمک به شما هستیم",
+
       readyDescription:
         "اگر قصد خرید یا فروش خانه، زمین، آپارتمان یا ملک تجاری را دارید، با ما تماس بگیرید.",
 
-      viewProperties: "مشاهده املاک",
+      viewProperties:
+        "مشاهده املاک",
     },
 
     footer: {
-      description: "دفتر رهنمای معاملات ملا داد محمد هوتک",
-      quickLinks: "لینک‌های سریع",
-      rights: "تمام حقوق محفوظ است.",
+      description:
+        "دفتر رهنمای معاملات ملا داد محمد هوتک",
+
+      quickLinks:
+        "لینک‌های سریع",
+
+      rights:
+        "تمام حقوق محفوظ است.",
     },
 
     pages: {
@@ -174,22 +202,24 @@ location: {
       about: "زموږ په اړه",
       contact: "اړیکه",
     },
-location: {
-  label: "زموږ موقعیت",
-  title: "زموږ د دفتر موقعیت",
-  description:
-    "د سپوږمکۍ انځورونو له لارې زموږ د ملکیت موقعیت وګورئ او شاوخوا سیمه وڅېړئ.",
-  coordinates: "د ملکیت مختصات",
-  latitude: "۳۴°۱۹'۲۴.۱\" شمالي",
-  longitude: "۶۲°۱۰'۲۷.۹\" ختیځ",
-  mapTitle: "د ملکیت د موقعیت سپوږمکۍ نقشه",
-  propertyLocation: "د ملکیت موقعیت",
-  getDirections: "لارښوونې ترلاسه کړئ",
-  latitudeLabel: "عرض البلد",
-  longitudeLabel: "طول البلد",
-  mapType: "د نقشې ډول",
-  satelliteImagery: "د سپوږمکۍ انځورونه",
-},
+
+    location: {
+      label: "زموږ موقعیت",
+      title: "زموږ د دفتر موقعیت",
+      description:
+        "د سپوږمکۍ انځورونو له لارې زموږ د ملکیت موقعیت وګورئ او شاوخوا سیمه وڅېړئ.",
+      coordinates: "د ملکیت مختصات",
+      latitude: "۳۴°۱۹'۲۴.۱\" شمالي",
+      longitude: "۶۲°۱۰'۲۷.۹\" ختیځ",
+      mapTitle: "د ملکیت د موقعیت سپوږمکۍ نقشه",
+      propertyLocation: "د ملکیت موقعیت",
+      getDirections: "لارښوونې ترلاسه کړئ",
+      latitudeLabel: "عرض البلد",
+      longitudeLabel: "طول البلد",
+      mapType: "د نقشې ډول",
+      satelliteImagery: "د سپوږمکۍ انځورونه",
+    },
+
     hero: {
       badge: "د املاکو په معاملو کې باور",
       title1: "هغه کور چې",
@@ -204,13 +234,16 @@ location: {
 
     search: {
       title: "خپل مناسب ملکیت پیدا کړئ",
-      description: "د ملکیت ډول او موقعیت انتخاب کړئ.",
+      description:
+        "د ملکیت ډول او موقعیت انتخاب کړئ.",
       purpose: "د معاملې ډول",
-      selectPurpose: "د معاملې ډول انتخاب کړئ",
+      selectPurpose:
+        "د معاملې ډول انتخاب کړئ",
       sale: "خرڅلاو",
       rent: "کرایه",
       type: "د ملکیت ډول",
-      selectType: "د ملکیت ډول انتخاب کړئ",
+      selectType:
+        "د ملکیت ډول انتخاب کړئ",
       house: "کور",
       apartment: "اپارتمان",
       land: "ځمکه",
@@ -224,7 +257,8 @@ location: {
       title: "خپل مناسب ملکیت پیدا کړئ",
       description:
         "د خرڅلاو او کرایې لپاره کورونه، اپارتمانونه، ځمکې او نور ملکیتونه.",
-      viewAll: "ټول ملکیتونه وګورئ",
+      viewAll:
+        "ټول ملکیتونه وګورئ",
     },
 
     property: {
@@ -241,7 +275,8 @@ location: {
 
     services: {
       label: "زموږ خدمتونه",
-      title: "د معاملې په ټولو پړاوونو کې ستاسو ملګري",
+      title:
+        "د معاملې په ټولو پړاوونو کې ستاسو ملګري",
 
       buying: {
         title: "د ملکیت اخیستل",
@@ -272,6 +307,7 @@ location: {
       label: "زموږ په اړه",
       title: "د املاکو معاملات،",
       highlight: "په ډېر باور سره",
+
       description:
         "د ملا داد محمد هوتک د معاملاتو لارښود دفتر د کورونو، ځمکو او نورو ملکیتونو د اخیستلو، خرڅولو، رهن او کرایې په برخه کې فعالیت کوي. زموږ هدف مشتریانو ته ساده، روښانه او باوري خدمات وړاندې کول دي.",
 
@@ -286,28 +322,52 @@ location: {
     contact: {
       label: "اړیکه",
       title: "له موږ سره اړیکه ونیسئ",
+
+      notFoundTitle:
+        "خپل مناسب ملکیت مو پیدا نه کړ؟",
+
+      notFoundDescription:
+        "له موږ سره اړیکه ونیسئ، موږ به ستاسو د مناسب ملکیت په پیدا کولو کې مرسته وکړو.",
+
       description:
         "د کور، ځمکې او نورو ملکیتونو د اخیستلو، خرڅولو، رهن او کرایې لپاره له موږ سره اړیکه ونیسئ.",
 
       phone: "ټیلیفوني اړیکه",
-      whatsapp: "واټساپ",
-      whatsappText: "په واټساپ کې پیغام",
-      telegram: "ټیلیګرام",
-      telegramText: "په ټیلیګرام کې پیغام",
-      address: "د دفتر پته",
-      addressValue: "هرات، افغانستان",
 
-      readyTitle: "موږ ستاسو مرستې ته چمتو یو",
+      whatsapp: "واټساپ",
+
+      whatsappText:
+        "په واټساپ کې پیغام",
+
+      telegram: "ټیلیګرام",
+
+      telegramText:
+        "په ټیلیګرام کې پیغام",
+
+      address: "د دفتر پته",
+
+      addressValue:
+        "هرات، افغانستان",
+
+      readyTitle:
+        "موږ ستاسو مرستې ته چمتو یو",
+
       readyDescription:
         "که تاسو د کور، ځمکې، اپارتمان یا تجارتي ملکیت د اخیستلو یا خرڅولو اراده لرئ، له موږ سره اړیکه ونیسئ.",
 
-      viewProperties: "ملکیتونه وګورئ",
+      viewProperties:
+        "ملکیتونه وګورئ",
     },
 
     footer: {
-      description: "د ملا داد محمد هوتک د معاملاتو لارښود دفتر",
-      quickLinks: "چټک لینکونه",
-      rights: "ټول حقوق خوندي دي.",
+      description:
+        "د ملا داد محمد هوتک د معاملاتو لارښود دفتر",
+
+      quickLinks:
+        "چټک لینکونه",
+
+      rights:
+        "ټول حقوق خوندي دي.",
     },
 
     pages: {
@@ -340,6 +400,27 @@ location: {
       contact: "Contact",
     },
 
+    location: {
+      label: "Find Us",
+      title: "Our Location",
+      description:
+        "Discover our property location through satellite imagery and explore the surrounding area.",
+      coordinates: "Property Coordinates",
+      latitude: "34°19'24.1\" N",
+      longitude: "62°10'27.9\" E",
+      mapTitle:
+        "Real Estate Property Satellite Map",
+      propertyLocation:
+        "Property Location",
+      getDirections:
+        "Get Directions",
+      latitudeLabel: "Latitude",
+      longitudeLabel: "Longitude",
+      mapType: "Map Type",
+      satelliteImagery:
+        "Satellite Imagery",
+    },
+
     hero: {
       badge: "Trusted Real Estate Services",
       title1: "The home",
@@ -347,9 +428,11 @@ location: {
       title3: "starts here.",
       description:
         "Mulla Dad Mohammad Hotak Real Estate — helping you buy, sell, rent, and lease homes, land, apartments, and properties.",
-      viewProperties: "View Properties",
+      viewProperties:
+        "View Properties",
       contact: "Contact Us",
-      location: "Herat, Afghanistan",
+      location:
+        "Herat, Afghanistan",
     },
 
     search: {
@@ -357,41 +440,29 @@ location: {
       description:
         "Choose the property type and location you are looking for.",
       purpose: "Purpose",
-      selectPurpose: "Select purpose",
+      selectPurpose:
+        "Select purpose",
       sale: "For Sale",
       rent: "For Rent",
       type: "Property Type",
-      selectType: "Select property type",
+      selectType:
+        "Select property type",
       house: "House",
       apartment: "Apartment",
       land: "Land",
       shop: "Shop",
-      location: "Location, neighborhood...",
+      location:
+        "Location, neighborhood...",
       search: "Search",
     },
-location: {
-  label: "Find Us",
-  title: "Our Location",
-  description:
-    "Discover our property location through satellite imagery and explore the surrounding area.",
-  coordinates: "Property Coordinates",
-  latitude: "34°19'24.1\" N",
-  longitude: "62°10'27.9\" E",
-  mapTitle: "Real Estate Property Satellite Map",
-  propertyLocation: "Property Location",
-  getDirections: "Get Directions",
-  latitudeLabel: "Latitude",
-  longitudeLabel: "Longitude",
-  mapType: "Map Type",
-  satelliteImagery: "Satellite Imagery",
-},
 
     featured: {
       label: "Featured Properties",
       title: "Find the right property",
       description:
         "Homes, apartments, land, and other properties available for sale and rent.",
-      viewAll: "View All Properties",
+      viewAll:
+        "View All Properties",
     },
 
     property: {
@@ -401,14 +472,18 @@ location: {
       sale: "For Sale",
       rent: "For Rent",
       details: "Details",
-      description: "Property Description",
-      call: "Call About This Property",
-      back: "Back to Properties",
+      description:
+        "Property Description",
+      call:
+        "Call About This Property",
+      back:
+        "Back to Properties",
     },
 
     services: {
       label: "Our Services",
-      title: "With you through every step",
+      title:
+        "With you through every step",
 
       buying: {
         title: "Buy Property",
@@ -429,7 +504,8 @@ location: {
       },
 
       consulting: {
-        title: "Real Estate Consulting",
+        title:
+          "Real Estate Consulting",
         description:
           "Guidance throughout the buying, selling, and property transaction process.",
       },
@@ -437,8 +513,11 @@ location: {
 
     about: {
       label: "About Us",
-      title: "Real estate transactions,",
-      highlight: "with greater confidence",
+      title:
+        "Real estate transactions,",
+      highlight:
+        "with greater confidence",
+
       description:
         "Mulla Dad Mohammad Hotak Real Estate provides services for buying, selling, renting, and leasing homes, land, apartments, and other properties. Our goal is to provide simple, transparent, and reliable services.",
 
@@ -453,28 +532,52 @@ location: {
     contact: {
       label: "Contact Us",
       title: "Get in touch with us",
+
+      notFoundTitle:
+        "Didn't find the property you were looking for?",
+
+      notFoundDescription:
+        "Contact us and we will help you find the right property.",
+
       description:
         "Contact Mulla Dad Mohammad Hotak Real Estate for buying, selling, renting, and leasing homes, land, apartments, and properties.",
 
       phone: "Phone Call",
-      whatsapp: "WhatsApp",
-      whatsappText: "Message us on WhatsApp",
-      telegram: "Telegram",
-      telegramText: "Message us on Telegram",
-      address: "Office Address",
-      addressValue: "Herat, Afghanistan",
 
-      readyTitle: "We are ready to help",
+      whatsapp: "WhatsApp",
+
+      whatsappText:
+        "Message us on WhatsApp",
+
+      telegram: "Telegram",
+
+      telegramText:
+        "Message us on Telegram",
+
+      address: "Office Address",
+
+      addressValue:
+        "Herat, Afghanistan",
+
+      readyTitle:
+        "We are ready to help",
+
       readyDescription:
         "If you are looking to buy or sell a house, land, apartment, or commercial property, get in touch with us.",
 
-      viewProperties: "View Properties",
+      viewProperties:
+        "View Properties",
     },
 
     footer: {
-      description: "Mulla Dad Mohammad Hotak Real Estate",
-      quickLinks: "Quick Links",
-      rights: "All rights reserved.",
+      description:
+        "Mulla Dad Mohammad Hotak Real Estate",
+
+      quickLinks:
+        "Quick Links",
+
+      rights:
+        "All rights reserved.",
     },
 
     pages: {
