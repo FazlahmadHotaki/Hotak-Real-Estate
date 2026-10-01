@@ -24,6 +24,7 @@ type Translation = {
     longitudeLabel: string;
     mapType: string;
     satelliteImagery: string;
+    coordinatePageLink: string;
   };
 
   location: {
@@ -183,7 +184,7 @@ export const translations: Record<Language, Translation> = {
       title: "موقعیت ملک",
       description:
         "موقعیت ملک را در تصاویر ماهواره‌ای مشاهده کنید.",
-      coordinates: "مختصات",
+      coordinates: "کوردینات",
       latitude: "عرض جغرافیایی",
       longitude: "طول جغرافیایی",
       mapTitle: "نقشه ماهواره‌ای ملک",
@@ -193,6 +194,9 @@ export const translations: Record<Language, Translation> = {
       longitudeLabel: "طول جغرافیایی",
       mapType: "نوع نقشه",
       satelliteImagery: "تصاویر ماهواره‌ای",
+
+      // NEW
+      coordinatePageLink: "مشاهده نقشه کوردینات",
     },
 
     location: {
@@ -200,7 +204,7 @@ export const translations: Record<Language, Translation> = {
       title: "موقعیت دفتر ما",
       description:
         "موقعیت ملکیت ما را از طریق تصاویر ماهواره‌ای مشاهده کرده و مناطق اطراف آن را بررسی کنید.",
-      coordinates: "مختصات ملکیت",
+      coordinates: "کوردینات ملکیت",
       latitude: "۳۴°۱۹'۲۴.۱\" شمالی",
       longitude: "۶۲°۱۰'۲۷.۹\" شرقی",
       mapTitle: "نقشه ماهواره‌ای موقعیت ملکیت",
@@ -396,7 +400,7 @@ export const translations: Record<Language, Translation> = {
       title: "د ملکیت موقعیت",
       description:
         "د سپوږمکۍ په انځورونو کې د ملکیت موقعیت وګورئ.",
-      coordinates: "مختصات",
+      coordinates: "کوردینات",
       latitude: "عرض البلد",
       longitude: "طول البلد",
       mapTitle: "د ملکیت سپوږمکۍ نقشه",
@@ -406,6 +410,9 @@ export const translations: Record<Language, Translation> = {
       longitudeLabel: "طول البلد",
       mapType: "د نقشې ډول",
       satelliteImagery: "سپوږمکۍ انځورونه",
+
+      // NEW
+      coordinatePageLink: "د کوردینات نقشې لیدل",
     },
 
     location: {
@@ -413,7 +420,7 @@ export const translations: Record<Language, Translation> = {
       title: "زموږ د دفتر موقعیت",
       description:
         "د سپوږمکۍ انځورونو له لارې زموږ د ملکیت موقعیت وګورئ او شاوخوا سیمه وڅېړئ.",
-      coordinates: "د ملکیت مختصات",
+      coordinates: "د ملکیت کوردینات",
       latitude: "۳۴°۱۹'۲۴.۱\" شمالي",
       longitude: "۶۲°۱۰'۲۷.۹\" ختیځ",
       mapTitle: "د ملکیت د موقعیت سپوږمکۍ نقشه",
@@ -624,6 +631,9 @@ export const translations: Record<Language, Translation> = {
       longitudeLabel: "Longitude",
       mapType: "Map Type",
       satelliteImagery: "Satellite Imagery",
+
+      // NEW
+      coordinatePageLink: "Open Coordinate Map",
     },
 
     location: {
