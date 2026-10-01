@@ -1,17 +1,45 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { useLanguage } from "./LanguageProvider";
 
 export default function Location() {
   const { t } = useLanguage();
 
-  const lat = 34.3233611;
-  const lng = 62.1744167;
+  const DEFAULT_LAT = 34.3233611;
+  const DEFAULT_LNG = 62.1744167;
 
-  const mapUrl = `https://maps.google.com/maps?q=${lat},${lng}&t=k&z=17&output=embed`;
+  const [latitude, setLatitude] = useState(DEFAULT_LAT);
+  const [longitude, setLongitude] = useState(DEFAULT_LNG);
 
-  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+  const [latInput, setLatInput] = useState(String(DEFAULT_LAT));
+  const [lngInput, setLngInput] = useState(String(DEFAULT_LNG));
+
+  const mapUrl = `https://maps.google.com/maps?q=${latitude},${longitude}&t=k&z=17&output=embed`;
+
+  const directionsUrl =
+    `https://www.google.com/maps/dir/?api=1&destination=` +
+    `${latitude},${longitude}`;
+
+  const handleShowLocation = () => {
+    const newLat = Number(latInput);
+    const newLng = Number(lngInput);
+
+    if (
+      Number.isNaN(newLat) ||
+      Number.isNaN(newLng) ||
+      newLat < -90 ||
+      newLat > 90 ||
+      newLng < -180 ||
+      newLng > 180
+    ) {
+      return;
+    }
+
+    setLatitude(newLat);
+    setLongitude(newLng);
+  };
 
   return (
     <section
@@ -36,18 +64,94 @@ export default function Location() {
             </p>
           </div>
 
-          {/* Coordinates */}
+          {/* Current Coordinates */}
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
             <p className="text-sm font-medium text-gray-500">
               {t.location.coordinates}
             </p>
 
             <p className="mt-3 font-semibold text-gray-900">
-              {t.location.latitude}
+              {latitude}° N
             </p>
 
             <p className="mt-1 font-semibold text-gray-900">
-              {t.location.longitude}
+              {longitude}° E
+            </p>
+          </div>
+        </div>
+
+        {/* Coordinate Input */}
+        <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+          <h3 className="text-lg font-semibold text-gray-900">
+            {t.propertyMap.coordinates}
+          </h3>
+
+          <p className="mt-2 text-sm text-gray-500">
+            Enter coordinates such as 34.3233611, 62.1744167
+          </p>
+
+          <div className="mt-5 grid gap-4 md:grid-cols-[1fr_1fr_auto]">
+
+            {/* Latitude */}
+            <div>
+              <label
+                htmlFor="latitude"
+                className="mb-2 block text-sm font-medium text-gray-700"
+              >
+                {t.location.latitudeLabel}
+              </label>
+
+              <input
+                id="latitude"
+                type="number"
+                step="any"
+                value={latInput}
+                onChange={(e) => setLatInput(e.target.value)}
+                placeholder="34.3233611"
+                className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-emerald-700 focus:ring-2 focus:ring-emerald-100"
+              />
+            </div>
+
+            {/* Longitude */}
+            <div>
+              <label
+                htmlFor="longitude"
+                className="mb-2 block text-sm font-medium text-gray-700"
+              >
+                {t.location.longitudeLabel}
+              </label>
+
+              <input
+                id="longitude"
+                type="number"
+                step="any"
+                value={lngInput}
+                onChange={(e) => setLngInput(e.target.value)}
+                placeholder="62.1744167"
+                className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-emerald-700 focus:ring-2 focus:ring-emerald-100"
+              />
+            </div>
+
+            {/* Button */}
+            <div className="flex items-end">
+              <button
+  type="button"
+  onClick={handleShowLocation}
+  className="w-full rounded-xl bg-emerald-900 px-6 py-3 font-semibold text-white transition hover:bg-emerald-800 md:w-auto"
+>
+  {t.location.showLocation}
+</button>
+            </div>
+          </div>
+
+          {/* Selected coordinates */}
+          <div className="mt-5 rounded-xl bg-stone-50 p-4">
+            <p className="text-sm text-gray-500">
+              {t.propertyMap.coordinates}
+            </p>
+
+            <p className="mt-1 font-semibold text-gray-900">
+              {latitude}° N, {longitude}° E
             </p>
           </div>
         </div>
@@ -55,6 +159,7 @@ export default function Location() {
         {/* Map */}
         <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl">
           <iframe
+            key={`${latitude}-${longitude}`}
             title={t.location.mapTitle}
             src={mapUrl}
             width="100%"
@@ -73,7 +178,7 @@ export default function Location() {
               </h3>
 
               <p className="mt-2 text-sm text-gray-500">
-                {lat}° N, {lng}° E
+                {latitude}° N, {longitude}° E
               </p>
             </div>
 
@@ -102,7 +207,7 @@ export default function Location() {
             </p>
 
             <p className="mt-2 font-semibold text-gray-900">
-              {t.location.latitude}
+              {latitude}° N
             </p>
           </div>
 
@@ -113,7 +218,7 @@ export default function Location() {
             </p>
 
             <p className="mt-2 font-semibold text-gray-900">
-              {t.location.longitude}
+              {longitude}° E
             </p>
           </div>
 

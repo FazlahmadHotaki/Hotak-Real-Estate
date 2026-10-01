@@ -25,6 +25,10 @@ type Translation = {
     mapType: string;
     satelliteImagery: string;
     coordinatePageLink: string;
+
+    copyCoordinates: string;
+    copied: string;
+    selectLocationInstruction: string;
   };
 
   location: {
@@ -41,6 +45,7 @@ type Translation = {
     longitudeLabel: string;
     mapType: string;
     satelliteImagery: string;
+    showLocation: string;
   };
 
   hero: {
@@ -194,9 +199,12 @@ export const translations: Record<Language, Translation> = {
       longitudeLabel: "طول جغرافیایی",
       mapType: "نوع نقشه",
       satelliteImagery: "تصاویر ماهواره‌ای",
-
-      // NEW
       coordinatePageLink: "مشاهده نقشه کوردینات",
+
+      copyCoordinates: "کپی کوردینات",
+      copied: "کپی شد",
+      selectLocationInstruction:
+        "برای انتخاب موقعیت، روی نقشه دوبار کلیک کنید",
     },
 
     location: {
@@ -214,6 +222,7 @@ export const translations: Record<Language, Translation> = {
       longitudeLabel: "طول جغرافیایی",
       mapType: "نوع نقشه",
       satelliteImagery: "تصاویر ماهواره‌ای",
+      showLocation: "نمایش موقعیت",
     },
 
     hero: {
@@ -410,9 +419,12 @@ export const translations: Record<Language, Translation> = {
       longitudeLabel: "طول البلد",
       mapType: "د نقشې ډول",
       satelliteImagery: "سپوږمکۍ انځورونه",
-
-      // NEW
       coordinatePageLink: "د کوردینات نقشې لیدل",
+
+      copyCoordinates: "کوردینات کاپي کړئ",
+      copied: "کاپي شول",
+      selectLocationInstruction:
+        "د موقعیت د ټاکلو لپاره پر نقشه دوه ځله کلیک وکړئ",
     },
 
     location: {
@@ -430,6 +442,7 @@ export const translations: Record<Language, Translation> = {
       longitudeLabel: "طول البلد",
       mapType: "د نقشې ډول",
       satelliteImagery: "د سپوږمکۍ انځورونه",
+      showLocation: "موقعیت وښایاست",
     },
 
     hero: {
@@ -631,9 +644,12 @@ export const translations: Record<Language, Translation> = {
       longitudeLabel: "Longitude",
       mapType: "Map Type",
       satelliteImagery: "Satellite Imagery",
-
-      // NEW
       coordinatePageLink: "Open Coordinate Map",
+
+      copyCoordinates: "Copy Coordinates",
+      copied: "Copied",
+      selectLocationInstruction:
+        "Double-click on the map to select a location",
     },
 
     location: {
@@ -655,6 +671,7 @@ export const translations: Record<Language, Translation> = {
       mapType: "Map Type",
       satelliteImagery:
         "Satellite Imagery",
+        showLocation: "Show Location",
     },
 
     hero: {
