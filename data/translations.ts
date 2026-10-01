@@ -2,7 +2,161 @@
 
 export type Language = "fa" | "ps" | "en";
 
-export const translations = {
+type Translation = {
+  nav: {
+    home: string;
+    properties: string;
+    about: string;
+    contact: string;
+  };
+
+  location: {
+    label: string;
+    title: string;
+    description: string;
+    coordinates: string;
+    latitude: string;
+    longitude: string;
+    mapTitle: string;
+    propertyLocation: string;
+    getDirections: string;
+    latitudeLabel: string;
+    longitudeLabel: string;
+    mapType: string;
+    satelliteImagery: string;
+  };
+
+  hero: {
+    badge: string;
+    title1: string;
+    title2: string;
+    title3: string;
+    description: string;
+    viewProperties: string;
+    contact: string;
+    location: string;
+  };
+
+  search: {
+    title: string;
+    description: string;
+    purpose: string;
+    selectPurpose: string;
+    sale: string;
+    rent: string;
+    type: string;
+    selectType: string;
+    house: string;
+    apartment: string;
+    land: string;
+    shop: string;
+    location: string;
+    search: string;
+  };
+
+  featured: {
+    label: string;
+    title: string;
+    description: string;
+    viewAll: string;
+  };
+
+  property: {
+    bedrooms: string;
+    bathrooms: string;
+    area: string;
+    sale: string;
+    rent: string;
+    details: string;
+    description: string;
+    call: string;
+    back: string;
+  };
+
+  services: {
+    label: string;
+    title: string;
+
+    buying: {
+      title: string;
+      description: string;
+    };
+
+    selling: {
+      title: string;
+      description: string;
+    };
+
+    renting: {
+      title: string;
+      description: string;
+    };
+
+    consulting: {
+      title: string;
+      description: string;
+    };
+  };
+
+  about: {
+    label: string;
+    title: string;
+    highlight: string;
+    description: string;
+    points: string[];
+  };
+
+  contact: {
+    label: string;
+    title: string;
+    notFoundTitle: string;
+    notFoundDescription: string;
+    description: string;
+    phone: string;
+    whatsapp: string;
+    whatsappText: string;
+    telegram: string;
+    telegramText: string;
+    address: string;
+    addressValue: string;
+    readyTitle: string;
+    readyDescription: string;
+    viewProperties: string;
+  };
+
+  footer: {
+    description: string;
+    quickLinks: string;
+    rights: string;
+  };
+
+  pages: {
+    properties: {
+      label: string;
+      title: string;
+      description: string;
+    };
+
+    about: {
+      title: string;
+      description: string;
+    };
+
+    contact: {
+      title: string;
+      description: string;
+    };
+  };
+};
+
+export const translations: Record<
+  Language,
+  Translation
+> = {
+  // =====================================================
+  // FARSI
+  // =====================================================
+
   fa: {
     nav: {
       home: "خانه",
@@ -194,6 +348,10 @@ export const translations = {
       },
     },
   },
+
+  // =====================================================
+  // PASHTO
+  // =====================================================
 
   ps: {
     nav: {
@@ -391,6 +549,10 @@ export const translations = {
       },
     },
   },
+
+  // =====================================================
+  // ENGLISH
+  // =====================================================
 
   en: {
     nav: {
@@ -601,4 +763,4 @@ export const translations = {
       },
     },
   },
-} as const;
+};
