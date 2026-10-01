@@ -37,12 +37,21 @@ export default function Navbar() {
     };
   }, []);
 
-  const links = [
-    { label: t.nav.home, href: "/" },
-    { label: t.nav.properties, href: "/properties" },
-    { label: t.nav.about, href: "/about" },
-    { label: t.nav.contact, href: "/contact" },
-  ];
+const links = [
+  { label: t.nav.home, href: "/" },
+  { label: t.nav.properties, href: "/properties" },
+  {
+    label:
+      language === "fa"
+        ? "محاسبه کمیسیون"
+        : language === "ps"
+          ? "د کمېشن محاسبه"
+          : "Commission",
+    href: "/calculator",
+  },
+  { label: t.nav.about, href: "/about" },
+  { label: t.nav.contact, href: "/contact" },
+];
 
   const displayPhone = phoneDisplay[language];
 
