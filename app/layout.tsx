@@ -15,6 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
+      <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=b3vYPbCuuzj7&format=png&color=000000" />
       <body>
         <LanguageProvider>
           {children}
