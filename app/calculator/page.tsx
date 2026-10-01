@@ -91,60 +91,65 @@ export default function CalculatorPage() {
   const t = content[language];
 
   return (
-    <main className="min-h-[95vh] bg-slate-50 px-4 pb-6 pt-24 sm:px-5 md:px-6 md:pt-28">
-      <div className="mx-auto flex min-h-[calc(95vh-7rem)] max-w-5xl flex-col justify-center">
+    <main className="min-h-[95vh] bg-slate-50 px-3 pb-3 pt-5 sm:px-4 sm:pt-24 md:px-5 md:pt-5">
+      <div className="mx-auto flex min-h-[calc(95vh-6rem)] max-w-5xl flex-col justify-center">
 
         {/* Header */}
         <div className="mx-auto w-full max-w-2xl shrink-0 text-center">
-          <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400 text-slate-950 shadow-md sm:mb-3 sm:h-12 sm:w-12">
+
+          <div className="mx-auto mb-1.5 flex h-9 w-9 items-center justify-center rounded-lg bg-amber-400 text-slate-950 shadow-sm sm:mb-2 sm:h-10 sm:w-10">
             <Calculator
-              size={20}
-              className="sm:h-6 sm:w-6"
+              size={18}
+              className="sm:h-5 sm:w-5"
             />
           </div>
 
-          <p className="text-xs font-bold text-amber-600 sm:text-sm">
+          <p className="text-[11px] font-bold text-amber-600 sm:text-xs">
             {t.label}
           </p>
 
-          <h1 className="mt-1 text-2xl font-black text-slate-950 sm:text-3xl md:text-4xl">
+          <h1 className="mt-0.5 text-xl font-black text-slate-950 sm:text-2xl md:text-3xl">
             {t.title}
           </h1>
 
-          <p className="mx-auto mt-2 max-w-xl text-xs leading-5 text-slate-500 sm:text-sm sm:leading-6">
+          <p className="mx-auto mt-1 max-w-xl text-[11px] leading-4 text-slate-500 sm:text-xs sm:leading-5">
             {t.description}
           </p>
+
         </div>
 
-        {/* Calculator */}
-        <div className="mx-auto mt-4 w-full shrink-0 overflow-hidden rounded-2xl bg-white shadow-xl sm:mt-5 sm:rounded-3xl">
+        {/* Calculator Card */}
+        <div className="mx-auto mt-3 w-full shrink-0 overflow-hidden rounded-2xl bg-white shadow-lg sm:mt-4 sm:rounded-3xl">
+
           <div className="grid md:grid-cols-2">
 
-            {/* INPUT SIDE */}
-            <section className="flex flex-col justify-center bg-slate-950 p-5 text-white sm:p-6 md:p-7 lg:p-8">
+            {/* INPUT */}
+            <section className="flex flex-col justify-center bg-slate-950 p-4 text-white sm:p-5 md:p-6">
 
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400 text-slate-950 sm:mb-4 sm:h-12 sm:w-12">
-                <Home size={20} />
+              <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-amber-400 text-slate-950 sm:mb-3 sm:h-10 sm:w-10">
+                <Home size={18} />
               </div>
 
-              <h2 className="text-lg font-black sm:text-xl">
+              <h2 className="text-base font-black sm:text-lg">
                 {t.propertyPrice}
               </h2>
 
-              <p className="mt-1 text-xs leading-5 text-white/60 sm:text-sm">
+              <p className="mt-0.5 text-[11px] leading-4 text-white/60 sm:text-xs sm:leading-5">
                 {t.description}
               </p>
 
-              {/* INPUT */}
-              <div className="mt-4 sm:mt-5">
+              {/* Input */}
+              <div className="mt-3 sm:mt-4">
+
                 <label
                   htmlFor="property-price"
-                  className="mb-2 block text-xs font-bold text-white/80 sm:text-sm"
+                  className="mb-1.5 block text-[11px] font-bold text-white/80 sm:text-xs"
                 >
                   {t.propertyPrice}
                 </label>
 
                 <div className="relative">
+
                   <input
                     id="property-price"
                     type="number"
@@ -155,133 +160,149 @@ export default function CalculatorPage() {
                       setPrice(event.target.value)
                     }
                     placeholder={t.placeholder}
-                    className="block w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3.5 text-lg font-black text-white outline-none placeholder:text-white/30 transition focus:border-amber-400 focus:bg-white/15 sm:py-4 sm:text-xl"
+                    className="block w-full rounded-lg border border-white/10 bg-white/10 px-3 py-2.5 text-base font-black text-white outline-none placeholder:text-white/30 transition focus:border-amber-400 focus:bg-white/15 sm:rounded-xl sm:py-3 sm:text-lg"
                   />
 
-                  <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-xs font-bold text-white/50 sm:text-sm">
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-white/50 sm:text-xs">
                     {t.afn}
                   </span>
+
                 </div>
+
               </div>
 
-              {/* NOTE */}
-              <div className="mt-4 flex items-start gap-2 rounded-xl border border-amber-400/20 bg-amber-400/10 p-3 sm:mt-5 sm:p-4">
+              {/* Note */}
+              <div className="mt-3 flex items-start gap-1.5 rounded-lg border border-amber-400/20 bg-amber-400/10 p-2.5 sm:mt-4 sm:rounded-xl sm:p-3">
                 <Percent
-                  size={17}
+                  size={14}
                   className="mt-0.5 shrink-0 text-amber-400"
                 />
 
-                <p className="text-xs leading-5 text-white/70 sm:text-sm">
+                <p className="text-[10px] leading-4 text-white/70 sm:text-xs sm:leading-5">
                   {t.note}
                 </p>
               </div>
+
             </section>
 
-            {/* RESULTS SIDE */}
-            <section className="flex flex-col justify-center p-5 sm:p-6 md:p-7 lg:p-8">
+            {/* RESULTS */}
+            <section className="flex flex-col justify-center p-4 sm:p-5 md:p-6">
 
-              <div className="grid gap-3 sm:gap-4">
+              <div className="grid gap-2.5 sm:gap-3">
 
-                {/* COMMISSION */}
-                <div className="rounded-2xl border border-slate-100 bg-slate-50 p-4 sm:p-5">
-                  <div className="flex items-center justify-between gap-3">
+                {/* Commission */}
+                <div className="rounded-xl border border-slate-100 bg-slate-50 p-3 sm:rounded-2xl sm:p-4">
+
+                  <div className="flex items-center justify-between gap-2">
 
                     <div className="min-w-0">
-                      <p className="text-xs font-medium text-slate-500 sm:text-sm">
+
+                      <p className="text-[11px] font-medium text-slate-500 sm:text-xs">
                         {t.commission}
                       </p>
 
-                      <p className="mt-1 truncate text-2xl font-black text-amber-600 sm:text-3xl">
+                      <p className="mt-0.5 truncate text-xl font-black text-amber-600 sm:text-2xl">
                         {numericPrice > 0
                           ? formatNumber(commission)
                           : "—"}
                       </p>
 
-                      <p className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
+                      <p className="mt-0.5 text-[10px] text-slate-400 sm:text-[11px]">
                         {numericPrice > 0
                           ? t.afn
                           : t.enterPrice}
                       </p>
+
                     </div>
 
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-600 sm:h-11 sm:w-11">
-                      <Percent size={18} />
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-amber-600 sm:h-9 sm:w-9">
+                      <Percent size={15} />
                     </div>
 
                   </div>
+
                 </div>
 
-                {/* RATE */}
-                <div className="rounded-2xl border border-slate-100 bg-slate-50 p-4 sm:p-5">
-                  <div className="flex items-center justify-between gap-3">
+                {/* Rate */}
+                <div className="rounded-xl border border-slate-100 bg-slate-50 p-3 sm:rounded-2xl sm:p-4">
+
+                  <div className="flex items-center justify-between gap-2">
 
                     <div className="min-w-0">
-                      <p className="text-xs font-medium text-slate-500 sm:text-sm">
+
+                      <p className="text-[11px] font-medium text-slate-500 sm:text-xs">
                         {t.rate}
                       </p>
 
-                      <p className="mt-1 text-2xl font-black text-slate-950 sm:text-3xl">
+                      <p className="mt-0.5 text-xl font-black text-slate-950 sm:text-2xl">
                         1.5%
                       </p>
 
-                      <p className="mt-0.5 text-[11px] text-slate-400 sm:text-xs">
+                      <p className="mt-0.5 text-[10px] text-slate-400 sm:text-[11px]">
                         {t.rateDescription}
                       </p>
+
                     </div>
 
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-950 text-amber-400 sm:h-11 sm:w-11">
-                      <Calculator size={18} />
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-950 text-amber-400 sm:h-9 sm:w-9">
+                      <Calculator size={15} />
                     </div>
 
                   </div>
+
                 </div>
 
-                {/* TOTAL */}
-                <div className="rounded-2xl bg-amber-400 p-4 shadow-md sm:p-5">
-                  <div className="flex items-center justify-between gap-3">
+                {/* Total */}
+                <div className="rounded-xl bg-amber-400 p-3 shadow-sm sm:rounded-2xl sm:p-4">
+
+                  <div className="flex items-center justify-between gap-2">
 
                     <div className="min-w-0">
-                      <p className="text-xs font-bold text-slate-800 sm:text-sm">
+
+                      <p className="text-[11px] font-bold text-slate-800 sm:text-xs">
                         {t.total}
                       </p>
 
-                      <p className="mt-1 truncate text-2xl font-black text-slate-950 sm:text-3xl">
+                      <p className="mt-0.5 truncate text-xl font-black text-slate-950 sm:text-2xl">
                         {numericPrice > 0
                           ? formatNumber(total)
                           : "—"}
                       </p>
 
-                      <p className="mt-0.5 text-[11px] text-slate-700 sm:text-xs">
+                      <p className="mt-0.5 text-[10px] text-slate-700 sm:text-[11px]">
                         {numericPrice > 0
                           ? t.afn
                           : t.enterPrice}
                       </p>
+
                     </div>
 
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-950 text-amber-400 sm:h-11 sm:w-11">
-                      <Wallet size={18} />
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-950 text-amber-400 sm:h-9 sm:w-9">
+                      <Wallet size={15} />
                     </div>
 
                   </div>
+
                 </div>
 
               </div>
 
-              {/* FORMULA */}
-              <div className="mt-3 rounded-2xl border border-slate-200 bg-white p-3 text-center sm:mt-4 sm:p-4">
-                <p className="text-[11px] text-slate-500 sm:text-xs">
+              {/* Formula */}
+              <div className="mt-2.5 rounded-xl border border-slate-200 bg-white p-2.5 text-center sm:mt-3 sm:rounded-2xl sm:p-3">
+
+                <p className="text-[10px] text-slate-500 sm:text-[11px]">
                   {t.formula}
                 </p>
 
-                <p className="mt-1 text-xs font-black text-slate-950 sm:text-sm">
+                <p className="mt-0.5 text-[11px] font-black text-slate-950 sm:text-xs">
+
                   {numericPrice > 0 ? (
                     <>
                       {formatNumber(numericPrice)}
                       {" × 0.015 = "}
 
                       <span className="text-amber-600">
-                        {formatNumber(commission)}{" "}
-                        {t.afn}
+                        {formatNumber(commission)} {t.afn}
                       </span>
                     </>
                   ) : (
@@ -289,10 +310,13 @@ export default function CalculatorPage() {
                       {t.enterPrice}
                     </span>
                   )}
+
                 </p>
+
               </div>
 
             </section>
+
           </div>
         </div>
       </div>
