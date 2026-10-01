@@ -13,7 +13,10 @@ import {
   type Language,
 } from "@/data/translations";
 
-type Translation = (typeof translations)["fa"];
+/*
+ * Translation can be any of the supported languages.
+ */
+type Translation = (typeof translations)[Language];
 
 type LanguageContextType = {
   language: Language;
@@ -23,17 +26,22 @@ type LanguageContextType = {
 };
 
 const LanguageContext =
-  createContext<LanguageContextType | undefined>(undefined);
+  createContext<LanguageContextType | undefined>(
+    undefined
+  );
 
 export function LanguageProvider({
   children,
 }: {
   children: ReactNode;
 }) {
-  // Persian/Dari is the default.
+  // Persian/Dari is the default language.
   const [language, setLanguageState] =
     useState<Language>("fa");
 
+  /*
+   * Load saved language.
+   */
   useEffect(() => {
     const saved = localStorage.getItem(
       "hotak-language"
@@ -48,6 +56,10 @@ export function LanguageProvider({
     }
   }, []);
 
+  /*
+   * Update HTML language, direction,
+   * and localStorage whenever language changes.
+   */
   useEffect(() => {
     const direction =
       language === "en" ? "ltr" : "rtl";
@@ -61,18 +73,33 @@ export function LanguageProvider({
     );
   }, [language]);
 
-  const setLanguage = (newLanguage: Language) => {
+  /*
+   * Change language.
+   */
+  const setLanguage = (
+    newLanguage: Language
+  ) => {
     setLanguageState(newLanguage);
   };
+
+  /*
+   * Current translation.
+   */
+  const t = translations[language];
+
+  /*
+   * Current text direction.
+   */
+  const direction =
+    language === "en" ? "ltr" : "rtl";
 
   return (
     <LanguageContext.Provider
       value={{
         language,
         setLanguage,
-        t: translations[language],
-        direction:
-          language === "en" ? "ltr" : "rtl",
+        t,
+        direction,
       }}
     >
       {children}

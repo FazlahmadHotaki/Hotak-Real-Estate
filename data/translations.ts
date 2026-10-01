@@ -9,6 +9,22 @@ export const translations = {
       contact: "تماس با ما",
     },
 
+location: {
+  label: "موقعیت ما",
+  title: "موقعیت دفتر ما",
+  description:
+    "موقعیت ملکیت ما را از طریق تصاویر ماهواره‌ای مشاهده کرده و مناطق اطراف آن را بررسی کنید.",
+  coordinates: "مختصات ملکیت",
+  latitude: "۳۴°۱۹'۲۴.۱\" شمالی",
+  longitude: "۶۲°۱۰'۲۷.۹\" شرقی",
+  mapTitle: "نقشه ماهواره‌ای موقعیت ملکیت",
+  propertyLocation: "موقعیت ملکیت",
+  getDirections: "دریافت مسیر",
+  latitudeLabel: "عرض جغرافیایی",
+  longitudeLabel: "طول جغرافیایی",
+  mapType: "نوع نقشه",
+  satelliteImagery: "تصاویر ماهواره‌ای",
+},
     hero: {
       badge: "اعتماد در معاملات املاک",
       title1: "خانه‌ای که",
@@ -158,7 +174,22 @@ export const translations = {
       about: "زموږ په اړه",
       contact: "اړیکه",
     },
-
+location: {
+  label: "زموږ موقعیت",
+  title: "زموږ د دفتر موقعیت",
+  description:
+    "د سپوږمکۍ انځورونو له لارې زموږ د ملکیت موقعیت وګورئ او شاوخوا سیمه وڅېړئ.",
+  coordinates: "د ملکیت مختصات",
+  latitude: "۳۴°۱۹'۲۴.۱\" شمالي",
+  longitude: "۶۲°۱۰'۲۷.۹\" ختیځ",
+  mapTitle: "د ملکیت د موقعیت سپوږمکۍ نقشه",
+  propertyLocation: "د ملکیت موقعیت",
+  getDirections: "لارښوونې ترلاسه کړئ",
+  latitudeLabel: "عرض البلد",
+  longitudeLabel: "طول البلد",
+  mapType: "د نقشې ډول",
+  satelliteImagery: "د سپوږمکۍ انځورونه",
+},
     hero: {
       badge: "د املاکو په معاملو کې باور",
       title1: "هغه کور چې",
@@ -338,6 +369,22 @@ export const translations = {
       location: "Location, neighborhood...",
       search: "Search",
     },
+location: {
+  label: "Find Us",
+  title: "Our Location",
+  description:
+    "Discover our property location through satellite imagery and explore the surrounding area.",
+  coordinates: "Property Coordinates",
+  latitude: "34°19'24.1\" N",
+  longitude: "62°10'27.9\" E",
+  mapTitle: "Real Estate Property Satellite Map",
+  propertyLocation: "Property Location",
+  getDirections: "Get Directions",
+  latitudeLabel: "Latitude",
+  longitudeLabel: "Longitude",
+  mapType: "Map Type",
+  satelliteImagery: "Satellite Imagery",
+},
 
     featured: {
       label: "Featured Properties",
