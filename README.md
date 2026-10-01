@@ -1,12 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hotak Real Estate
+
+Welcome to **Hotak Real Estate**, a real estate website built with Next.js. The platform helps users explore property listings and locations with a multilingual interface supporting **Farsi, Pashto, and English**.
 
 ## Getting Started
 
-First, run the development server:
+First, install the project dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
+```
+
+You can also use Yarn, pnpm, or Bun:
+
+```bash
 yarn dev
 # or
 pnpm dev
@@ -14,23 +26,79 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser to view Hotak Real Estate.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the website by modifying files in the `app` directory. The page automatically updates as you save your changes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
+
+* **Multilingual Support:** Farsi, Pashto, and English.
+* **Property Locations:** Interactive map for selecting property locations.
+* **Map Integration:** Leaflet maps with Esri World Imagery.
+* **Coordinate Selection:** Select a location on the map and view its coordinates.
+* **Responsive Design:** Designed to work across different screen sizes.
+* **Modern Framework:** Built with Next.js and React.
+
+## Technologies Used
+
+* [Next.js](https://nextjs.org/)
+* [React](https://react.dev/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Leaflet](https://leafletjs.com/)
+* [Esri World Imagery](https://www.esri.com/)
+
+## Project Structure
+
+```text
+app/
+  page.tsx
+  layout.tsx
+  PropertyMap/
+    page.tsx
+    PropertyMapClient.tsx
+
+components/
+  LanguageProvider.tsx
+  Location.tsx
+
+data/
+  translations.ts
+
+public/
+  favicon.png
+```
+
+*Your project may contain additional files and directories.*
+
+## Running the Project
+
+To create a production build, run:
+
+```bash
+npm run build
+```
+
+To start the production server after building:
+
+```bash
+npm run start
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+For more information about the technologies used in this project, see:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* [Next.js Documentation](https://nextjs.org/docs)
+* [Next.js Learn](https://nextjs.org/learn)
+* [React Documentation](https://react.dev/)
+* [Leaflet Documentation](https://leafletjs.com/reference.html)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Hotak Real Estate can be deployed using [Vercel](https://vercel.com/), the platform developed by the creators of Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For deployment instructions, visit the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Hotak Real Estate** — Your destination for finding property and exploring locations.
