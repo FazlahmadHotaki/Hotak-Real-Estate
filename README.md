@@ -1,6 +1,8 @@
 # Hotak Real Estate
 
-Welcome to **Hotak Real Estate**, a real estate website built with Next.js. The platform helps users explore property listings and locations with a multilingual interface supporting **Farsi, Pashto, and English**.
+Welcome to **Hotak Real Estate**, a real estate platform built with Next.js that helps users explore properties and locations through a multilingual interface supporting Farsi, Pashto, and English.
+
+🌐 **Live Website:** https://hotak-real-estate.vercel.app/
 
 ## Getting Started
 
@@ -10,11 +12,13 @@ First, install the project dependencies:
 npm install
 ```
 
-Then, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
+
+Open http://localhost:3000 in your browser to view the website locally.
 
 You can also use Yarn, pnpm, or Bun:
 
@@ -26,18 +30,14 @@ pnpm dev
 bun dev
 ```
 
-Open http://localhost:3000 in your browser to view Hotak Real Estate.
-
-You can start editing the website by modifying files in the `app` directory. The page automatically updates as you save your changes.
-
 ## Features
 
-* **Multilingual Support:** Farsi, Pashto, and English.
-* **Property Locations:** Interactive map for selecting property locations.
-* **Map Integration:** Leaflet maps with Esri World Imagery.
-* **Coordinate Selection:** Select a location on the map and view its coordinates.
-* **Responsive Design:** Designed to work across different screen sizes.
-* **Modern Framework:** Built with Next.js and React.
+* **Multilingual Interface:** Supports Farsi, Pashto, and English.
+* **Interactive Property Map:** Explore and select property locations.
+* **Map Integration:** Uses Leaflet and Esri World Imagery.
+* **Coordinate Selection:** Select locations and view their geographic coordinates.
+* **Responsive Design:** Built for different screen sizes.
+* **Modern Web Technologies:** Powered by Next.js, React, and TypeScript.
 
 ## Technologies Used
 
@@ -68,37 +68,39 @@ public/
   favicon.png
 ```
 
-*Your project may contain additional files and directories.*
+*Note: Your actual project may contain additional files and directories.*
 
-## Running the Project
+## Run a Production Build
 
-To create a production build, run:
+Build the application:
 
 ```bash
 npm run build
 ```
 
-To start the production server after building:
+Start the production server:
 
 ```bash
 npm run start
 ```
 
-## Learn More
+## Deployment
 
-For more information about the technologies used in this project, see:
+The website is deployed on [Vercel](https://vercel.com/).
+
+Visit the live application:
+
+**https://hotak-real-estate.vercel.app/**
+
+For deployment guidance, see the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## Learn More
 
 * [Next.js Documentation](https://nextjs.org/docs)
 * [Next.js Learn](https://nextjs.org/learn)
 * [React Documentation](https://react.dev/)
 * [Leaflet Documentation](https://leafletjs.com/reference.html)
 
-## Deployment
-
-Hotak Real Estate can be deployed using [Vercel](https://vercel.com/), the platform developed by the creators of Next.js.
-
-For deployment instructions, visit the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
-
 ---
 
-**Hotak Real Estate** — Your destination for finding property and exploring locations.
+**Hotak Real Estate** — Explore properties. Discover locations. Find your place.
