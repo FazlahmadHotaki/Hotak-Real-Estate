@@ -14,9 +14,51 @@ import {
 } from "@/data/translations";
 
 /*
- * Translation can be any of the supported languages.
+ * All languages must have the same structure.
+ * The values are strings, not Persian-specific literal values.
  */
-type Translation = (typeof translations)[Language];
+type Translation = {
+  nav: {
+    home: string;
+    properties: string;
+    about: string;
+    contact: string;
+  };
+
+  hero: {
+    badge: string;
+    title1: string;
+    title2: string;
+    title3: string;
+    description: string;
+    viewProperties: string;
+    contact: string;
+    location: string;
+  };
+
+  location: {
+    label: string;
+    title: string;
+    description: string;
+    coordinates: string;
+    latitude: string;
+    longitude: string;
+    mapTitle: string;
+    propertyLocation: string;
+    getDirections: string;
+    latitudeLabel: string;
+    longitudeLabel: string;
+    mapType: string;
+    satelliteImagery: string;
+  };
+
+  /*
+   * Keep the rest of your translation sections here.
+   * If your translations.ts has more sections, they should
+   * also be represented here.
+   */
+  [key: string]: unknown;
+};
 
 type LanguageContextType = {
   language: Language;
@@ -35,13 +77,9 @@ export function LanguageProvider({
 }: {
   children: ReactNode;
 }) {
-  // Persian/Dari is the default language.
   const [language, setLanguageState] =
     useState<Language>("fa");
 
-  /*
-   * Load saved language.
-   */
   useEffect(() => {
     const saved = localStorage.getItem(
       "hotak-language"
@@ -56,10 +94,6 @@ export function LanguageProvider({
     }
   }, []);
 
-  /*
-   * Update HTML language, direction,
-   * and localStorage whenever language changes.
-   */
   useEffect(() => {
     const direction =
       language === "en" ? "ltr" : "rtl";
@@ -73,23 +107,14 @@ export function LanguageProvider({
     );
   }, [language]);
 
-  /*
-   * Change language.
-   */
   const setLanguage = (
     newLanguage: Language
   ) => {
     setLanguageState(newLanguage);
   };
 
-  /*
-   * Current translation.
-   */
-  const t = translations[language];
+  const t = translations[language] as Translation;
 
-  /*
-   * Current text direction.
-   */
   const direction =
     language === "en" ? "ltr" : "rtl";
 
