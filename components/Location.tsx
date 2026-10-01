@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
 
 export default function Location() {
@@ -128,6 +129,21 @@ export default function Location() {
           </div>
 
         </div>
+
+        {/* Coordinate Map Link */}
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/PropertyMap"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-900 px-7 py-3.5 font-semibold text-white transition hover:bg-emerald-800"
+          >
+            {t.propertyMap.coordinatePageLink}
+
+            <span aria-hidden="true">
+              →
+            </span>
+          </Link>
+        </div>
+
       </div>
     </section>
   );

@@ -10,6 +10,22 @@ type Translation = {
     contact: string;
   };
 
+  propertyMap: {
+    label: string;
+    title: string;
+    description: string;
+    coordinates: string;
+    latitude: string;
+    longitude: string;
+    mapTitle: string;
+    propertyLocation: string;
+    getDirections: string;
+    latitudeLabel: string;
+    longitudeLabel: string;
+    mapType: string;
+    satelliteImagery: string;
+  };
+
   location: {
     label: string;
     title: string;
@@ -149,10 +165,7 @@ type Translation = {
   };
 };
 
-export const translations: Record<
-  Language,
-  Translation
-> = {
+export const translations: Record<Language, Translation> = {
   // =====================================================
   // FARSI
   // =====================================================
@@ -163,6 +176,23 @@ export const translations: Record<
       properties: "املاک",
       about: "درباره ما",
       contact: "تماس با ما",
+    },
+
+    propertyMap: {
+      label: "ملک",
+      title: "موقعیت ملک",
+      description:
+        "موقعیت ملک را در تصاویر ماهواره‌ای مشاهده کنید.",
+      coordinates: "مختصات",
+      latitude: "عرض جغرافیایی",
+      longitude: "طول جغرافیایی",
+      mapTitle: "نقشه ماهواره‌ای ملک",
+      propertyLocation: "موقعیت ملک",
+      getDirections: "دریافت مسیر",
+      latitudeLabel: "عرض جغرافیایی",
+      longitudeLabel: "طول جغرافیایی",
+      mapType: "نوع نقشه",
+      satelliteImagery: "تصاویر ماهواره‌ای",
     },
 
     location: {
@@ -234,7 +264,7 @@ export const translations: Record<
 
     services: {
       label: "خدمات ما",
-      title: "همراه شما در تمام مراحل معامله",
+      title: "همراه شما در تمام مراحل",
 
       buying: {
         title: "خرید ملک",
@@ -359,6 +389,23 @@ export const translations: Record<
       properties: "ملکیتونه",
       about: "زموږ په اړه",
       contact: "اړیکه",
+    },
+
+    propertyMap: {
+      label: "ملکیت",
+      title: "د ملکیت موقعیت",
+      description:
+        "د سپوږمکۍ په انځورونو کې د ملکیت موقعیت وګورئ.",
+      coordinates: "مختصات",
+      latitude: "عرض البلد",
+      longitude: "طول البلد",
+      mapTitle: "د ملکیت سپوږمکۍ نقشه",
+      propertyLocation: "د ملکیت موقعیت",
+      getDirections: "لارښوونې ترلاسه کړئ",
+      latitudeLabel: "عرض البلد",
+      longitudeLabel: "طول البلد",
+      mapType: "د نقشې ډول",
+      satelliteImagery: "سپوږمکۍ انځورونه",
     },
 
     location: {
@@ -560,6 +607,23 @@ export const translations: Record<
       properties: "Properties",
       about: "About Us",
       contact: "Contact",
+    },
+
+    propertyMap: {
+      label: "Property",
+      title: "Property Location",
+      description:
+        "View the property location on satellite imagery.",
+      coordinates: "Coordinates",
+      latitude: "Latitude",
+      longitude: "Longitude",
+      mapTitle: "Property Satellite Map",
+      propertyLocation: "Property Location",
+      getDirections: "Get Directions",
+      latitudeLabel: "Latitude",
+      longitudeLabel: "Longitude",
+      mapType: "Map Type",
+      satelliteImagery: "Satellite Imagery",
     },
 
     location: {
